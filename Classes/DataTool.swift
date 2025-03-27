@@ -5,6 +5,10 @@
 //
 
 
+enum CurveCryptoECDHKeyCompressType: UInt8 {
+    case notCompress = 0x04
+}
+
 class DataTool: NSObject {
     
     class func dataFromHexStr(hexStr: String) -> Data? {

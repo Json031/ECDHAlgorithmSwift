@@ -4,6 +4,7 @@
 //  Created by MorganChen on 2025/3/26.
 //
 
+import GMEllipticCurveCrypto
 
 //Default Settings
 let defaultGMEllipticCurve: GMEllipticCurve = GMEllipticCurveSecp256r1
@@ -61,10 +62,11 @@ class ECDHAlgorithmSwift: NSObject {
             generateKeys(gmellipticCurve: defaultGMEllipticCurve, compressedPublicKey: defaultCompressedPublicKey);
         }
         // attach a 0x04 byte to the first byte of the received public key, call the compressPublicKey method to compress it into a 32-bit public key, and then pass it to the sharedSecretForPublicKey method to obtain the shared key
-        guard var pData = otherPKStr.data else {
+        var pData = Data(bytes: [CurveCryptoECDHKeyCompressType.notCompress.rawValue], count: 1)
+        guard var pkData = otherPKStr.data else {
             return
         }
-        pData.insert(contentsOf: [CurveCryptoECDHKeyCompressType.notCompress.rawValue], at: 0)
+        pData.append(pkData)
         
         let compressPublicKey = self.gmellipticCurveCrypto?.compressPublicKey(pData)
         //Generate a share key by combining the other party's public key with their own private key
