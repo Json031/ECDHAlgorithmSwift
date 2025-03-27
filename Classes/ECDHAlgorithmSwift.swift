@@ -4,7 +4,6 @@
 //  Created by MorganChen on 2025/3/26.
 //
 
-import GMEllipticCurveCrypto
 
 //Default Settings
 let defaultGMEllipticCurve: GMEllipticCurve = GMEllipticCurveSecp256r1
