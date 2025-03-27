@@ -4,10 +4,6 @@
 //  Created by MorganChen on 2025/3/26.
 //
 
-//Default Settings
-let defaultGMEllipticCurve: GMEllipticCurve = GMEllipticCurveSecp256r1
-let defaultCompressedPublicKey: Bool = true
-
 class ECDHAlgorithmSwift: NSObject {
 
     private var sharedKey: Data?
