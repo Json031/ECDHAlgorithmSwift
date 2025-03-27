@@ -1,1 +1,2 @@
-*.swift linguist-detectable=true
+* linguist-vendored
+*.swift linguist-vendored=false
