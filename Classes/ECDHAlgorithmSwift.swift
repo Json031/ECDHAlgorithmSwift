@@ -4,6 +4,8 @@
 //  Created by MorganChen on 2025/3/26.
 //
 
+import ECDHAlgorithmiOS
+
 class ECDHAlgorithmSwift: NSObject {
 
     private var sharedKey: Data?
