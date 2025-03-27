@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ECDHAlgorithmSwift"
-  spec.version      = "1.0.13"
+  spec.version      = "1.0.15"
   spec.summary      = "A key exchange protocol algorithm based on elliptic curve cryptography for Swift."
 
   # This description is used to generate tags and improve search results.
@@ -132,6 +132,7 @@ Send the share key to the backend server, and if the backend server verifies tha
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
 
+  spec.swift_versions = '5.0'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
