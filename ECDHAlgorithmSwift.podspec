@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ECDHAlgorithmSwift"
-  spec.version      = "1.0.11"
+  spec.version      = "1.0.12"
   spec.summary      = "A key exchange protocol algorithm based on elliptic curve cryptography for Swift."
 
   # This description is used to generate tags and improve search results.
@@ -144,7 +144,6 @@ Send the share key to the backend server, and if the backend server verifies tha
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
 
-  spec.module_map = 'Classes/GMEllipticCurveCrypto/module.modulemap'
 
   spec.subspec 'GMEllipticCurveCrypto' do |ss|
     ss.source_files = 'Classes/GMEllipticCurveCrypto/*.{h,m}'
