@@ -14,5 +14,5 @@ extension Character {
     /// Checks if the scalars will be merged into an emoji
     var combinedIntoEmoji: Bool { unicodeScalars.count > 1 && unicodeScalars.first?.properties.isEmoji ?? false }
 
-    var isEmojiChar: Bool { isSimpleEmoji || isCombinedIntoEmoji }
+    var isEmojiChar: Bool { containEmoji || combinedIntoEmoji }
 }
