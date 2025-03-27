@@ -61,7 +61,7 @@ class ECDHAlgorithmSwift: NSObject {
         }
         // attach a 0x04 byte to the first byte of the received public key, call the compressPublicKey method to compress it into a 32-bit public key, and then pass it to the sharedSecretForPublicKey method to obtain the shared key
         var pData = Data(bytes: [CurveCryptoECDHKeyCompressType.notCompress.rawValue], count: 1)
-        guard var pkData = otherPKStr.data else {
+        guard let pkData: Data = DataTool.dataFromHexStr(hexStr: otherPKStr) else {
             return
         }
         pData.append(pkData)
