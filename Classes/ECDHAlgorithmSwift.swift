@@ -43,7 +43,7 @@ class ECDHAlgorithmSwift: NSObject {
         if (self.gmellipticCurveCrypto == nil) {
             self.generateKeys(gmellipticCurve: defaultGMEllipticCurve, compressedPublicKey: defaultCompressedPublicKey)
         }
-        return self.gmellipticCurveCrypto!.publicKey.subdata(in: 1..<self.gmellipticCurveCrypto!.publicKey.count)
+        return DataTool.clipData(data: self.gmellipticCurveCrypto!.publicKey, start: 1, endNotInclude: self.gmellipticCurveCrypto!.publicKey.count)
     }
 
 
@@ -56,8 +56,8 @@ class ECDHAlgorithmSwift: NSObject {
             generateKeys(gmellipticCurve: defaultGMEllipticCurve, compressedPublicKey: defaultCompressedPublicKey);
         }
         // attach a 0x04 byte to the first byte of the received public key, call the compressPublicKey method to compress it into a 32-bit public key, and then pass it to the sharedSecretForPublicKey method to obtain the shared key
-        var pData = Data(bytes: [CurveCryptoECDHKeyCompressType.notCompress.rawValue], count: 1)
-        guard let pkData: Data = DataTool.dataFromHexStr(hexStr: otherPKStr) else {
+        var pData = Data.data(byte: CurveCryptoECDHKeyCompressType.notCompress.rawValue)
+        guard let pkData: Data = otherPKStr.hexStrToData() else {
             return
         }
         pData.append(pkData)
