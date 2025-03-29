@@ -40,7 +40,7 @@ sharedKey2: "2fd727d984828a28ab6a521f53dd2d06c67fbb80104aef8c1369a9e352094424"
 # Installation 安装:
 
 ## CocoaPods
-The [ECDHAlgorithmiOS SDK for iOS](https://github.com/Json031/ECDHAlgorithmiOS) is available through [CocoaPods](http://cocoapods.org). If CocoaPods is not installed, install it using the following command. Note that Ruby will also be installed, as it is a dependency of Cocoapods.
+The [ECDHAlgorithmSwift SDK for iOS](https://github.com/Json031/ECDHAlgorithmSwift) is available through [CocoaPods](http://cocoapods.org). If CocoaPods is not installed, install it using the following command. Note that Ruby will also be installed, as it is a dependency of Cocoapods.
    ```bash
    brew install cocoapods
    pod setup
@@ -48,8 +48,9 @@ The [ECDHAlgorithmiOS SDK for iOS](https://github.com/Json031/ECDHAlgorithmiOS) 
 
 pod 'ECDHAlgorithmSwift' # Full version with all features
 
-## 手动安装
-将Classes文件夹拽入项目中，导入头文件：#import "ECDHAlgorithmiOS.h"
+## 手动安装 manual install
+将Classes文件夹拽入项目中，OC项目还需要桥接
+Drag the Classes folder into the project, OC project still needs bridging
 
 # Troubleshooting
 
@@ -63,4 +64,4 @@ Need to obtain the public key from a third party first, then go to generateShare
 <br>
 
 # License
-This library is licensed under the [MIT License](https://github.com/Json031/ECDHAlgorithmiOS/blob/main/LICENSE).
+This library is licensed under the [MIT License](https://github.com/Json031/ECDHAlgorithmSwift/blob/main/LICENSE).
