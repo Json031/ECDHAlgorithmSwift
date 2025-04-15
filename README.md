@@ -1,7 +1,8 @@
 <h1 align="center"><a href="https://github.com/Json031/ECDHAlgorithmiOS"><img src="https://img.shields.io/badge/Objective--C-007AFF?logo=apple&logoColor=white" title="Swift version" float=left></a><strong><a href="https://github.com/Json031/ECDHAlgorithmiOS">Click here to go to the Objective-C version</a></strong></h1>
 
 # ECDHAlgorithmSwift
-A key exchange protocol algorithm based on elliptic curve cryptography for Swift.
+一种基于椭圆曲线密码学的Swift密钥交换协议算法开源项目。
+<br>An open-source project for Swift key exchange protocol algorithm based on elliptic curve cryptography.
 # ECDH算法
 一种基于椭圆曲线密码学的iOS密钥交换协议算法。
 * 最新版本 Latest Version: [![CocoaPods](https://img.shields.io/cocoapods/v/ECDHAlgorithmSwift.svg)](https://cocoapods.org/pods/ECDHAlgorithmSwift)
