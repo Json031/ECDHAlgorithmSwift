@@ -1,11 +1,15 @@
 <h1 align="center"><a href="https://github.com/Json031/ECDHAlgorithmiOS"><img src="https://img.shields.io/badge/Objective--C-007AFF?logo=apple&logoColor=white" title="Objective-C" float=left></a><strong><a href="https://github.com/Json031/ECDHAlgorithmiOS">Click here to go to the Objective-C version</a></strong></h1>
 
 # ECDHAlgorithmSwift
+[![CocoaPods](https://img.shields.io/cocoapods/v/ECDHAlgorithmSwift.svg)](https://cocoapods.org/pods/ECDHAlgorithmSwift)
+![Swift 5](https://img.shields.io/badge/Swift-5.0-orange.svg)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/Json031/ECDHAlgorithmSwift/blob/main/LICENSE)
+<br>
 一种基于椭圆曲线密码学的Swift密钥交换协议算法开源项目。
 <br>An open-source project for Swift key exchange protocol algorithm based on elliptic curve cryptography.
 # ECDH算法
 一种基于椭圆曲线密码学的iOS密钥交换协议算法。
-* 最新版本 Latest Version: [![CocoaPods](https://img.shields.io/cocoapods/v/ECDHAlgorithmSwift.svg)](https://cocoapods.org/pods/ECDHAlgorithmSwift)
+* 最新版本 Latest Version: 
 
 ECDH非对称加密方式交换对称密钥流程：
 <br>1️⃣调用方法generateKeys生成密钥对(公钥64字节和私钥32字节)
