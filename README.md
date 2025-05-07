@@ -7,9 +7,32 @@
 <br>
 一种基于椭圆曲线密码学的Swift密钥交换协议算法开源项目。
 <br>An open-source project for Swift key exchange protocol algorithm based on elliptic curve cryptography.
-# ECDH算法
-一种基于椭圆曲线密码学的iOS密钥交换协议算法。
-* 最新版本 Latest Version: 
+
+# Installation 安装:
+
+## CocoaPods
+The [ECDHAlgorithmSwift SDK for iOS](https://github.com/Json031/ECDHAlgorithmSwift) is available through [CocoaPods](http://cocoapods.org). If CocoaPods is not installed, install it using the following command. Note that Ruby will also be installed, as it is a dependency of Cocoapods.
+   ```bash
+   brew install cocoapods
+   pod setup
+   ```
+
+   ```bash
+   $iOSVersion = '11.0'
+   
+   platform :ios, $iOSVersion
+   use_frameworks!
+   
+   target 'YourProjectName' do
+      pod 'ECDHAlgorithmSwift' # Full version with all features
+   end
+   ```
+
+## 手动安装 manual install
+将Classes文件夹拽入项目中，OC项目还需要桥接
+<br>Drag the Classes folder into the project, OC project still needs bridging
+
+# ECDH算法 
 
 ECDH非对称加密方式交换对称密钥流程：
 <br>1️⃣调用方法generateKeys生成密钥对(公钥64字节和私钥32字节)
@@ -45,22 +68,6 @@ The process of exchanging symmetric keys using ECDH asymmetric encryption method
 ✅Result: sharedKey1 should equal to sharedKey2
 <br>sharedKey1: "2fd727d984828a28ab6a521f53dd2d06c67fbb80104aef8c1369a9e352094424"
 <br>sharedKey2: "2fd727d984828a28ab6a521f53dd2d06c67fbb80104aef8c1369a9e352094424"
-
-
-# Installation 安装:
-
-## CocoaPods
-The [ECDHAlgorithmSwift SDK for iOS](https://github.com/Json031/ECDHAlgorithmSwift) is available through [CocoaPods](http://cocoapods.org). If CocoaPods is not installed, install it using the following command. Note that Ruby will also be installed, as it is a dependency of Cocoapods.
-   ```bash
-   brew install cocoapods
-   pod setup
-   ```
-
-pod 'ECDHAlgorithmSwift' # Full version with all features
-
-## 手动安装 manual install
-将Classes文件夹拽入项目中，OC项目还需要桥接
-<br>Drag the Classes folder into the project, OC project still needs bridging
 
 # Troubleshooting
 
