@@ -37,10 +37,10 @@ The [ECDHAlgorithmSwift SDK for iOS](https://github.com/Json031/ECDHAlgorithmSwi
 ECDH非对称加密方式交换对称密钥流程：
 <br>1️⃣调用方法generateKeys生成密钥对(公钥64字节和私钥32字节)
 <br>2️⃣通过蓝牙或http方式，将步骤1️⃣生成的公钥发给对方
-<br>3️⃣等待对方蓝牙Notify等方式发送它的公钥过来，调用configThirdPublicKey将对方的公钥和自己的私钥生成share key，对方也通过步骤2️⃣接收到的公钥与其私钥生成share key，两个share key是一样的
+<br>3️⃣等待对方蓝牙Notify等方式发送它的公钥过来，调用configThirdPublicKey将对方的公钥和自己的私钥生成share key，对方也通过步骤2️⃣接收到的公钥与其私钥生成share key，根据椭圆曲线点乘的交换性原理这两个share key是一样的
 <br>4️⃣将共享密钥发送到后端服务器，如果后端服务器验证两者相同，则表示身份验证成功；
 <br>可用于双方身份验证及绑定关联；
-<br>还可以作为后续通信过程的数据对称加密算法的密钥确保通信数据安全性；
+<br>还可以作为后续通信过程的数据对称加密算法的密钥，基于椭圆曲线离散对数问题的困难性，使得攻击者难以从公开的通信信息中获取共享密钥，确保了通信数据安全性；
 
 The process of exchanging symmetric keys using ECDH asymmetric encryption method:
 <br>1 Call method generateKeys to generate a key pair (64 bytes for public key and 32 bytes for private key).
